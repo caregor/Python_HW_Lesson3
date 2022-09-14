@@ -24,4 +24,3 @@
 # CONST_LIST = [2, 3, 5, 9, 9]
 # odd_list = [CONST_LIST[n] for n in range(1, len(CONST_LIST), 2)]
 # print(sum(odd_list))
-
