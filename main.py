@@ -21,7 +21,6 @@
     - для k = 8 список будет выглядеть так: [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
 """
 
-
 # Задача №1
 # CONST_LIST = [2, 3, 5, 9, 9]
 # odd_list = [CONST_LIST[n] for n in range(1, len(CONST_LIST), 2)]
@@ -61,17 +60,17 @@
 # print(bin(some_number).replace('0b',''))
 
 # Задача №5
-k = int(input('k = '))
-tmp = 0
-result = []
-fibonacchi = [0, 1]
-for i in range(k - 1):
-    tmp = fibonacchi[i] + fibonacchi[i+1]
-    fibonacchi.append(tmp)
-    if i % 2 == 0:
-        result.append(-tmp)
-    else:
-        result.append(tmp)
-result.reverse()
-result.extend(fibonacchi)
-print(result)
+# k = int(input('k = '))
+# tmp = 0
+# result = []
+# fibonacci = [0, 1]
+# for i in range(k - 1):
+#     tmp = fibonacci[i] + fibonacci[i + 1]
+#     fibonacci.append(tmp)
+#     if i % 2 == 0:
+#         result.append(-tmp)
+#     else:
+#         result.append(tmp)
+# result.reverse()
+# result.extend(fibonacci)
+# print(result)
