@@ -20,6 +20,8 @@
     Пример:
     - для k = 8 список будет выглядеть так: [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
 """
+
+
 # Задача №1
 # CONST_LIST = [2, 3, 5, 9, 9]
 # odd_list = [CONST_LIST[n] for n in range(1, len(CONST_LIST), 2)]
@@ -38,10 +40,22 @@
 #     result.append(first * last)
 # print(result)
 
-#Задача №3
+# Задача №3
+# data = [1.1, 1.2, 3.1, 5.1, 10.01]
+# tmp_list = []
+# for i in range(len(data)):
+#     tmp_list.append(data[i] * 100 % 100)
+# print((max(tmp_list) - min(tmp_list)) / 100)
 
-data = [1.1, 1.2, 3.1, 5.1, 10.01]
-tmp_list = []
-for i in range(len(data)):
-    tmp_list.append(data[i] * 100 % 100)
-print((max(tmp_list) - min(tmp_list)) / 100)
+# Задача №4
+def dec_to_bin(number):
+    if number > 1:
+        dec_to_bin(number // 2)
+    print(number % 2, end='')
+
+
+some_number = int(input('Enter a Dec number: '))
+dec_to_bin(some_number)
+print()
+# с помощью готовой функции
+print(bin(some_number).replace('0b',''))
