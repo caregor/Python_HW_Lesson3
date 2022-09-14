@@ -26,14 +26,22 @@
 # print(sum(odd_list))
 
 # Задача №2
-data_list = list(map(int, input('Enter some list: ').split()))
-result = []
-while data_list:
-    try:
-        first = data_list.pop(0)
-        last = data_list.pop()
-    except:
-        result.append(first * first)
-        break
-    result.append(first * last)
-print(result)
+# data_list = list(map(int, input('Enter some list: ').split()))
+# result = []
+# while data_list:
+#     try:
+#         first = data_list.pop(0)
+#         last = data_list.pop()
+#     except:
+#         result.append(first * first)
+#         break
+#     result.append(first * last)
+# print(result)
+
+#Задача №3
+
+data = [1.1, 1.2, 3.1, 5.1, 10.01]
+tmp_list = []
+for i in range(len(data)):
+    tmp_list.append(data[i] * 100 % 100)
+print((max(tmp_list) - min(tmp_list)) / 100)
