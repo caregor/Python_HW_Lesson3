@@ -16,7 +16,7 @@
     - 45 -> 101101
     - 3 -> 11
     - 2 -> 10
-4. Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
+5. Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
     Пример:
     - для k = 8 список будет выглядеть так: [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
 """
@@ -24,3 +24,16 @@
 # CONST_LIST = [2, 3, 5, 9, 9]
 # odd_list = [CONST_LIST[n] for n in range(1, len(CONST_LIST), 2)]
 # print(sum(odd_list))
+
+# Задача №2
+data_list = list(map(int, input('Enter some list: ').split()))
+result = []
+while data_list:
+    try:
+        first = data_list.pop(0)
+        last = data_list.pop()
+    except:
+        result.append(first * first)
+        break
+    result.append(first * last)
+print(result)
