@@ -48,14 +48,30 @@
 # print((max(tmp_list) - min(tmp_list)) / 100)
 
 # Задача №4
-def dec_to_bin(number):
-    if number > 1:
-        dec_to_bin(number // 2)
-    print(number % 2, end='')
+# def dec_to_bin(number):
+#     if number > 1:
+#         dec_to_bin(number // 2)
+#     print(number % 2, end='')
+#
+#
+# some_number = int(input('Enter a Dec number: '))
+# dec_to_bin(some_number)
+# print()
+# # с помощью готовой функции
+# print(bin(some_number).replace('0b',''))
 
-
-some_number = int(input('Enter a Dec number: '))
-dec_to_bin(some_number)
-print()
-# с помощью готовой функции
-print(bin(some_number).replace('0b',''))
+# Задача №5
+k = int(input('k = '))
+tmp = 0
+result = []
+fibonacchi = [0, 1]
+for i in range(k - 1):
+    tmp = fibonacchi[i] + fibonacchi[i+1]
+    fibonacchi.append(tmp)
+    if i % 2 == 0:
+        result.append(-tmp)
+    else:
+        result.append(tmp)
+result.reverse()
+result.extend(fibonacchi)
+print(result)
